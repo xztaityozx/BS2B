@@ -15,7 +15,10 @@
       "default_title": "FS2B",
       "default_popup": "popup/popup.html",
       "browser_style": true
-    }
+    },
   
+    "permissions":[
+      "storage"
+    ]
     
   }

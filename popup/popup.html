@@ -10,8 +10,27 @@
     <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">FireFoxで選択したところを棒読みちゃんに送るやつです</span>
     </nav>
-    <textarea name="texts" id="message" cols="30" rows="10"></textarea>
-    <button type="button" class="btn btn-outline-secondary">Select</button>
-    <button type="button" class="btn btn-primary">Send</button>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">IP Address</span>
+        </div>
+        <input type="text" class="form-control" placeholder="127.0.0.1" aria-label="ipaddress" id="ipaddress" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Port</span>
+        </div>
+        <input type="text" class="form-control" placeholder="50001" aria-label="ipaddress" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Message</span>
+        </div>
+        <textarea name="message" id="message" cols="30" rows="10" class="form-control" aria-label="Message"></textarea>
+    </div>
+    <div align="right">
+        <button type="button" class="btn btn-primary" >Send</button>
+    </div>
+    <script src="../script/popup.js"></script>
 </body>
 </html>

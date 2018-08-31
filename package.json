@@ -1,0 +1,28 @@
+{
+  "name": "fs2b",
+  "version": "1.0.0",
+  "description": "FireFoxで選択したところを棒読みちゃんに送るやつ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xztaityozx/FS2B.git"
+  },
+  "keywords": [
+    "web-ext"
+  ],
+  "author": "xztaityozx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xztaityozx/FS2B/issues"
+  },
+  "homepage": "https://github.com/xztaityozx/FS2B#readme",
+  "devDependencies": {
+    "web-ext-types": "^2.1.0"
+  },
+  "dependencies": {
+    "browser": "^0.2.6"
+  }
+}
