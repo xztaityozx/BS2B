@@ -18,7 +18,15 @@
     },
   
     "permissions":[
-      "storage"
-    ]
+      "storage",
+      "tabs",
+      "activeTab"
+    ],
+
+    "applications": {
+      "gecko": {
+        "id": "FS2B@taityo001.com"
+      }
+    }
     
   }

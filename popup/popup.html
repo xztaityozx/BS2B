@@ -20,7 +20,7 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Port</span>
         </div>
-        <input type="text" class="form-control" placeholder="50001" aria-label="ipaddress" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="50001" aria-label="ipaddress" id="port" aria-describedby="basic-addon1">
     </div>
     <div class="input-group">
         <div class="input-group-prepend">
@@ -29,8 +29,9 @@
         <textarea name="message" id="message" cols="30" rows="10" class="form-control" aria-label="Message"></textarea>
     </div>
     <div align="right">
-        <button type="button" class="btn btn-primary" >Send</button>
+        <button type="button" class="btn btn-outline-secondary" id="getButton" >Get</button>
+        <button type="button" class="btn btn-primary" id="sendButton" >Send</button>
     </div>
-    <script src="../script/popup.js"></script>
+    <script src="./popup.js"></script>
 </body>
 </html>
