@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "ブラウザで選択したところを棒読みちゃんに送るやつ",
-    "version": "1.1",
+    "version": "1.2",
    
     "description": "ブラウザで選択したところを棒読みちゃんに送るやつです",
     

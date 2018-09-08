@@ -65,7 +65,8 @@ const sendMessage=function(command){
     if(command===0x0001){
         text.split(/\n/).forEach(element => {
             if(element==="") return;
-            sendText(prefix+element);
+            if(encodeURI(element).replace(/%../g,"x").length>946) sendText(prefix+"Skipします");
+            else sendText(prefix+element);
         });    
     }else {
         sendText(prefix+"");
