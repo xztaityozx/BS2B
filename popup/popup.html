@@ -7,20 +7,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">FireFoxで選択したところを棒読みちゃんに送るやつです</span>
-    </nav>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">IP Address</span>
+    <div class="card">
+        <div class="card-header">
+            FireFoxで選択したところを棒読みちゃんに送るやつ
         </div>
-        <input type="text" class="form-control" placeholder="127.0.0.1" aria-label="ipaddress" id="ipaddress" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Port</span>
+        
+        <div class="card-body">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="isKeep">
+                <label for="isKeep" class="form-check-label">テキストを保持する</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="doClear">
+                <label for="doClear" class="form-check-label">送った後にテキストをリセットする</label>
+            </div>
         </div>
-        <input type="text" class="form-control" placeholder="50001" aria-label="ipaddress" id="port" aria-describedby="basic-addon1">
     </div>
     <div class="input-group">
         <div class="input-group-prepend">
@@ -29,8 +30,15 @@
         <textarea name="message" id="message" cols="30" rows="10" class="form-control" aria-label="Message"></textarea>
     </div>
     <div align="right">
-        <button type="button" class="btn btn-outline-secondary" id="getButton" >Get</button>
-        <button type="button" class="btn btn-primary" id="sendButton" >Send</button>
+        <div class="btn-group" role="group">
+            <button type="button" style="pointer-events: none;width: 70px" class="btn btn-dark" id="info" disabled>Waiting</button>
+            <button type="button" class="btn btn-outline-danger" id="skipButton">Skip</button>
+            <button type="button" class="btn btn-outline-secondary" id="pauseButton">Pause</button>
+            <button type="button" class="btn btn-outline-secondary" id="resumeButton">Resume</button>
+            <button type="button" class="btn btn-warning" id="resetButton">Reset</button>
+            <button type="button" class="btn btn-secondary" id="appendButton" >Append</button>
+            <button type="button" class="btn btn-primary" id="sendButton" >Send</button>
+        </div>
     </div>
     <script src="./popup.js"></script>
 </body>

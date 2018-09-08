@@ -7,12 +7,13 @@
     "description": "FireFoxで選択したところを棒読みちゃんに送るやつです",
     
     "icons": {
-      "48": "icons/icon-48.png"
+      "48": "icons/icon.svg",
+      "96": "icons/icon.svg"
     },
   
     "browser_action":{
-      "default_icon": "icons/icon-48.png",
-      "default_title": "FS2B",
+      "default_icon": "icons/icon.svg",
+      "default_title": "BS2B",
       "default_popup": "popup/popup.html",
       "browser_style": true
     },
@@ -25,7 +26,7 @@
 
     "applications": {
       "gecko": {
-        "id": "FS2B@taityo001.com"
+        "id": "BS2B@taityo001.com"
       }
     }
     
