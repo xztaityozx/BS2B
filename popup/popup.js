@@ -56,21 +56,34 @@ const sendMessage=function(command){
     var pitch = -1; 
     var volume = -1; 
     var type = 0; 
-    var text = textArea.value;
+    const text = textArea.value;
 
-    var sends = ""+ command+ delim + speed + delim + pitch + delim + volume + delim + type + delim + text;
 
-    var socket = new WebSocket(`ws://localhost:50002/`);
-    socket.onopen = function() {
-        infoCtrl(3);
-        socket.send(sends);
+
+
+    var prefix = ""+ command+ delim + speed + delim + pitch + delim + volume + delim + type + delim;
+    if(command===0x0001){
+        text.split(/\n/).forEach(element => {
+            if(element==="") return;
+            sendText(prefix+element);
+        });    
+    }else {
+        sendText(prefix+"");
     }
+}
+
+const sendText=function(inst){
+    var socket = new WebSocket(`ws://localhost:50002/`);
     socket.onerror=function(e){
         infoCtrl(2);
         onErr(e);
     }
     socket.onmessage=function(e){}
     socket.onclose=function(e){}
+    socket.onopen = function() {
+        infoCtrl(3);
+        socket.send(inst);
+    };
 }
 
 // info control
